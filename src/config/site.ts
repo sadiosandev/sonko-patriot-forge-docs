@@ -6,7 +6,12 @@ export const siteConfig = {
   currentVersion: '0.9.6',
   laravelVersion: '13',
   composerPackage: 'sadio-sanghare/sonko-patriot-forge',
-  githubUrl: 'https://github.com',
+  githubUrl: 'https://github.com/sadiosandev/sonko-patriot-forge',
   editBaseUrl: '',
   accent: '#5b3df5',
 };
+
+export const basePath =
+    process.env.NODE_ENV === 'production'
+        ? '/sonko-patriot-forge-docs/'
+        : '/';
