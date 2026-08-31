@@ -41,7 +41,7 @@ export default function HomePage() {
 
       <section className="features-section container">
         <div className="section-kicker">Everything in one forge</div>
-        <h2>Une documentation pensée comme un produit.</h2>
+        <h2>The Laravel package treated as a product.</h2>
         <div className="row g-4 mt-2">
           {features.map(([icon, title, text]) => (
             <div className="col-md-6 col-xl-4" key={title}>
