@@ -11,7 +11,3 @@ export const siteConfig = {
   accent: '#5b3df5',
 };
 
-export const basePath =
-    process.env.NODE_ENV === 'production'
-        ? '/sonko-patriot-forge-docs/'
-        : '/';
