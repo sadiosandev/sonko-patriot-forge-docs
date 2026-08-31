@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 import ThemeToggle from '../components/ThemeToggle';
@@ -13,6 +13,24 @@ const features = [
 ];
 
 export default function HomePage() {
+  const [copied, setCopied] = useState(false);
+  const installCommand =
+    'composer require sadio-sanghare/sonko-patriot-forge:@dev';
+
+  const handleCopy = async () => {
+      try {
+          await navigator.clipboard.writeText(installCommand);
+
+          setCopied(true);
+
+          setTimeout(() => {
+              setCopied(false);
+          }, 2000);
+      } catch (error) {
+          console.error('Impossible de copier la commande :', error);
+      }
+  };
+
   return (
     <div className="landing-page">
       <nav className="landing-nav container-fluid px-4 px-lg-5">
@@ -33,10 +51,31 @@ export default function HomePage() {
           <Link to="/docs/complete-artisan-command-catalog" className="btn btn-outline-secondary btn-lg">Browse commands</Link>
         </div>
         <div className="install-command">
+            <span>composer</span>
+
+            <code>{installCommand}</code>
+
+            <button
+                type="button"
+                className="install-command-copy"
+                onClick={handleCopy}
+                title={copied ? 'Copied!' : 'Copy the command'}
+                aria-label="Copy the Composer command"
+            >
+                <i
+                    className={
+                        copied
+                            ? 'bi bi-check-lg'
+                            : 'bi bi-copy'
+                    }
+                />
+            </button>
+        </div>
+        {/* <div className="install-command">
           <span>composer</span>
           <code>composer require sadio-sanghare/sonko-patriot-forge:@dev</code>
           <i className="bi bi-copy" />
-        </div>
+        </div> */}
       </section>
 
       <section className="features-section container">
