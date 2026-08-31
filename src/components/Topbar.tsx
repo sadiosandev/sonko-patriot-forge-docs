@@ -38,9 +38,8 @@ export default function Topbar({ onMenu }: { onMenu: () => void }) {
         <div className="docs-topbar-actions">
           <select className="form-select version-select" defaultValue="0.9.6" aria-label="Version">
             <option value="0.9.6">v0.9.6</option>
-            <option value="0.9.x">v0.9.x</option>
           </select>
-          <a className="btn btn-icon d-none d-sm-inline-flex" href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a className="btn btn-icon d-none d-sm-inline-flex" href="https://github.com/sadiosandev/sonko-patriot-forge" target="_blank" rel="noreferrer" aria-label="GitHub">
             <i className="bi bi-github" />
           </a>
           <ThemeToggle />
