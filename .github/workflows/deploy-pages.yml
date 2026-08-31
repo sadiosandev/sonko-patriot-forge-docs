@@ -1,4 +1,4 @@
-name: Deploy documentation to GitHub Pages
+name: Deploy SONKOPATRIOT FORGE documentation to GitHub Pages
 
 on:
   push:
