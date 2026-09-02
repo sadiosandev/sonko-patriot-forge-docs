@@ -37,7 +37,7 @@ export default function HomePage() {
         <Link to="/" className="text-decoration-none"><Logo /></Link>
         <div className="d-flex align-items-center gap-2">
           <Link to="/docs/introduction" className="btn btn-link text-decoration-none landing-link">Docs</Link>
-          <a href="https://github.com" className="btn btn-icon" target="_blank" rel="noreferrer"><i className="bi bi-github" /></a>
+          <a href="https://github.com/sadiosandev/sonko-patriot-forge" className="btn btn-icon" target="_blank" rel="noreferrer"><i className="bi bi-github" /></a>
           <ThemeToggle />
         </div>
       </nav>
