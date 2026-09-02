@@ -23,7 +23,7 @@ export default function TableOfContents({ items }: { items: TocItem[] }) {
   return (
     <aside className="docs-toc d-none d-xxl-block">
       <div className="toc-card">
-        <div className="toc-title">Sur cette page</div>
+        <div className="toc-title">On this page</div>
         <nav>
           {items.map((item) => (
             <a
